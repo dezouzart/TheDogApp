@@ -8,11 +8,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let viewController = ViewController()
-        let rootNavigationController = viewController
+        let rootNavigationController = setupViewControllers()
         
         window?.rootViewController = rootNavigationController
         window?.makeKeyAndVisible()
+    }
+    
+    private func setupViewControllers() -> TabBarController {
+        let tabBar = TabBarController()
+        
+        let viewController1 = ViewController()
+        viewController1.view.backgroundColor = .black
+        let navigation1 = AppNavigationController(rootViewController: viewController1)
+        navigation1.tabBarItem = UITabBarItem(title: "List", image: nil, selectedImage: nil)
+        
+        let viewController2 = ViewController()
+        viewController2.view.backgroundColor = .white
+        let navigation2 = AppNavigationController(rootViewController: viewController2)
+        navigation2.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
+        
+        tabBar.setViewControllers([navigation1, navigation2], animated: false)
+        
+        return tabBar
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
