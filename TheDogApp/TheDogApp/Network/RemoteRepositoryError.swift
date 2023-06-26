@@ -1,9 +1,8 @@
 enum RemoteRepositoryError: Swift.Error {
     case internalError
-    case invalidURL
+    case requestInvalid
     case emptyResponseData
-    case unsupportedJSONEncoding
-    case unsupportedJSONStructure
+    case unsupportedJSONEncodingOrStructure
     case httpError
     case unableToRetrieveData
 }

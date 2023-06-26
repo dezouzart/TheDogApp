@@ -8,6 +8,8 @@ class BreedViewController: UIViewController, BreedDisplayLogic {
         super.viewDidLoad()
         title = "Breed List"
         view.backgroundColor = .black
+        
+        interactor?.fetchBreeds(request: Breed.Request(page: 0))
     }
     
     func showLoadingView() {

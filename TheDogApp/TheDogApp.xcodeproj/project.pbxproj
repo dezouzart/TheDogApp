@@ -28,6 +28,8 @@
 		F942ADD52A49EA2100A0D0CF /* RemoteRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADD42A49EA2100A0D0CF /* RemoteRepositoryError.swift */; };
 		F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADD62A49EA4200A0D0CF /* URLSessionBoundaries.swift */; };
 		F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADD82A49EA7900A0D0CF /* ResourceJSONParser.swift */; };
+		F942ADDC2A49F0B000A0D0CF /* BreedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */; };
+		F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F942ADD42A49EA2100A0D0CF /* RemoteRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRepositoryError.swift; sourceTree = "<group>"; };
 		F942ADD62A49EA4200A0D0CF /* URLSessionBoundaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionBoundaries.swift; sourceTree = "<group>"; };
 		F942ADD82A49EA7900A0D0CF /* ResourceJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceJSONParser.swift; sourceTree = "<group>"; };
+		F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedEndpoint.swift; sourceTree = "<group>"; };
+		F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,7 @@
 				F942ADB92A49C57E00A0D0CF /* BreedProtocols.swift */,
 				F942ADC92A49DCAF00A0D0CF /* BreedModels.swift */,
 				F942ADCB2A49DCB400A0D0CF /* VIP */,
+				F942ADDA2A49EB9300A0D0CF /* Repository */,
 			);
 			path = Breed;
 			sourceTree = "<group>";
@@ -249,6 +254,15 @@
 				F942ADD82A49EA7900A0D0CF /* ResourceJSONParser.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F942ADDA2A49EB9300A0D0CF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */,
+				F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,12 +402,14 @@
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
 				F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */,
 				F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */,
+				F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */,
 				F942ADD52A49EA2100A0D0CF /* RemoteRepositoryError.swift in Sources */,
 				F942ADAD2A48DC2B00A0D0CF /* TabBarController.swift in Sources */,
 				F942ADCE2A49DD0800A0D0CF /* BreedInteractor.swift in Sources */,
 				F942ADBA2A49C57E00A0D0CF /* BreedProtocols.swift in Sources */,
 				F942ADD22A49DD7100A0D0CF /* BreedViewController.swift in Sources */,
 				F942AD782A48D2AA00A0D0CF /* AppDelegate.swift in Sources */,
+				F942ADDC2A49F0B000A0D0CF /* BreedEndpoint.swift in Sources */,
 				F942ADB22A48E0B500A0D0CF /* Fonts.swift in Sources */,
 				F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */,
 				F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */,

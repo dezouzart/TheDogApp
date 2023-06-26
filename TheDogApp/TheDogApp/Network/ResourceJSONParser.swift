@@ -1,11 +1,13 @@
 import Foundation
 
 protocol JSONParserLogic {
-    func parse(from data: Data) -> [String: AnyObject]?
+    func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable
 }
 
 class ResourceJSONParser: JSONParserLogic {
-    func parse(from data: Data) -> [String: AnyObject]? {
-        return try? JSONSerialization.jsonObject(with: data) as? [String: AnyObject]
+    func decode<T>(_ type: T.Type, from data: Data) throws -> T where T : Decodable {
+        let decoder = JSONDecoder()
+        let structure = try decoder.decode(type, from: data)
+        return structure
     }
 }

@@ -20,3 +20,7 @@ protocol BreedPresentationLogic: UICollectionViewDataSource {
 protocol BreedBusinessLogic {
     func fetchBreeds(request: Breed.Request)
 }
+
+protocol BreedRepository {
+    func fetchBreeds(dataRequest: Breed.Request, completion: @escaping (Result<Breed.DataList, Swift.Error>) -> Void)
+}
