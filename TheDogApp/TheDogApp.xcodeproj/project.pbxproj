@@ -19,6 +19,12 @@
 		F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADAF2A48E04C00A0D0CF /* Colors.swift */; };
 		F942ADB22A48E0B500A0D0CF /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADB12A48E0B500A0D0CF /* Fonts.swift */; };
 		F942ADB52A48E2D100A0D0CF /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADB42A48E2D100A0D0CF /* AppNavigationController.swift */; };
+		F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADB72A49C55F00A0D0CF /* BreedModuleFactory.swift */; };
+		F942ADBA2A49C57E00A0D0CF /* BreedProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADB92A49C57E00A0D0CF /* BreedProtocols.swift */; };
+		F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADC92A49DCAF00A0D0CF /* BreedModels.swift */; };
+		F942ADCE2A49DD0800A0D0CF /* BreedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADCD2A49DD0800A0D0CF /* BreedInteractor.swift */; };
+		F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADCF2A49DD1500A0D0CF /* BreedPresenter.swift */; };
+		F942ADD22A49DD7100A0D0CF /* BreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		F942ADAF2A48E04C00A0D0CF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F942ADB12A48E0B500A0D0CF /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		F942ADB42A48E2D100A0D0CF /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		F942ADB72A49C55F00A0D0CF /* BreedModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModuleFactory.swift; sourceTree = "<group>"; };
+		F942ADB92A49C57E00A0D0CF /* BreedProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedProtocols.swift; sourceTree = "<group>"; };
+		F942ADC92A49DCAF00A0D0CF /* BreedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedModels.swift; sourceTree = "<group>"; };
+		F942ADCD2A49DD0800A0D0CF /* BreedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInteractor.swift; sourceTree = "<group>"; };
+		F942ADCF2A49DD1500A0D0CF /* BreedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedPresenter.swift; sourceTree = "<group>"; };
+		F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,7 @@
 				F942ADAB2A48DC1200A0D0CF /* TabBarController */,
 				F942ADAE2A48E01C00A0D0CF /* Helpers */,
 				F942AD7B2A48D2AA00A0D0CF /* ViewController.swift */,
+				F942ADBB2A49C7E700A0D0CF /* Domain */,
 				F942AD852A48D2AB00A0D0CF /* Info.plist */,
 				F942AD802A48D2AB00A0D0CF /* Assets.xcassets */,
 			);
@@ -182,6 +195,43 @@
 				F942ADB42A48E2D100A0D0CF /* AppNavigationController.swift */,
 			);
 			path = AppNavigationController;
+			sourceTree = "<group>";
+		};
+		F942ADB62A49C4FA00A0D0CF /* Breed */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADB72A49C55F00A0D0CF /* BreedModuleFactory.swift */,
+				F942ADB92A49C57E00A0D0CF /* BreedProtocols.swift */,
+				F942ADC92A49DCAF00A0D0CF /* BreedModels.swift */,
+				F942ADCB2A49DCB400A0D0CF /* VIP */,
+			);
+			path = Breed;
+			sourceTree = "<group>";
+		};
+		F942ADBB2A49C7E700A0D0CF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADB62A49C4FA00A0D0CF /* Breed */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F942ADCB2A49DCB400A0D0CF /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADCD2A49DD0800A0D0CF /* BreedInteractor.swift */,
+				F942ADCF2A49DD1500A0D0CF /* BreedPresenter.swift */,
+				F942ADCC2A49DCC700A0D0CF /* View */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
+		F942ADCC2A49DCC700A0D0CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +366,14 @@
 			files = (
 				F942ADB52A48E2D100A0D0CF /* AppNavigationController.swift in Sources */,
 				F942AD7C2A48D2AA00A0D0CF /* ViewController.swift in Sources */,
+				F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */,
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
+				F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */,
+				F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */,
 				F942ADAD2A48DC2B00A0D0CF /* TabBarController.swift in Sources */,
+				F942ADCE2A49DD0800A0D0CF /* BreedInteractor.swift in Sources */,
+				F942ADBA2A49C57E00A0D0CF /* BreedProtocols.swift in Sources */,
+				F942ADD22A49DD7100A0D0CF /* BreedViewController.swift in Sources */,
 				F942AD782A48D2AA00A0D0CF /* AppDelegate.swift in Sources */,
 				F942ADB22A48E0B500A0D0CF /* Fonts.swift in Sources */,
 				F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */,

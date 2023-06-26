@@ -15,6 +15,6 @@ class ViewController: UIViewController {
         let viewController = ViewController()
         viewController.view.backgroundColor = .cyan
         
-        navigationController?.present(viewController, animated: true, completion: nil)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
