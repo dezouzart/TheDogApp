@@ -11,19 +11,9 @@ class BreedProvider: BreedRepository {
     }
     
     func fetchBreeds(dataRequest: Breed.Request, completion: @escaping (Result<Breed.DataList, Error>) -> Void) {
-        guard let request = BreedEndpoints.breedList(page: dataRequest.page).request else {
-            completion(.failure(RemoteRepositoryError.requestInvalid))
-            return
-        }
-        
-        let task = session.dataTask(request: request) { [weak self] (data, response, error) in
-            if error != nil {
-                completion(.failure(RemoteRepositoryError.httpError))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(RemoteRepositoryError.emptyResponseData))
+        DispatchQueue.global().async { [weak self] in
+            guard let request = BreedEndpoints.breedList(page: dataRequest.page).request else {
+                completion(.failure(RemoteRepositoryError.requestInvalid))
                 return
             }
             
@@ -32,24 +22,36 @@ class BreedProvider: BreedRepository {
                 return
             }
             
-            do {
-                let breedDataResponse = try context.jsonParser.decode(
-                    [Breed.Data].self,
-                    from: data
-                )
-                completion(.success(Breed.DataList(breedDataList: breedDataResponse)))
-            } catch {
-                completion(.failure(RemoteRepositoryError.unsupportedJSONEncodingOrStructure))
+            let task = context.session.dataTask(request: request) { (data, response, error) in
+                if error != nil {
+                    completion(.failure(RemoteRepositoryError.httpError))
+                    return
+                }
+                
+                guard let data = data else {
+                    completion(.failure(RemoteRepositoryError.emptyResponseData))
+                    return
+                }
+                
+                do {
+                    let breedDataResponse = try context.jsonParser.decode(
+                        [Breed.Data].self,
+                        from: data
+                    )
+                    completion(.success(Breed.DataList(breedDataList: breedDataResponse)))
+                } catch {
+                    completion(.failure(RemoteRepositoryError.unsupportedJSONEncodingOrStructure))
+                    return
+                }
+            }
+            
+            guard let dataTask = task else {
+                completion(.failure(RemoteRepositoryError.requestInvalid))
                 return
             }
+            
+            dataTask.resume()
         }
-        
-        guard let dataTask = task else {
-            completion(.failure(RemoteRepositoryError.requestInvalid))
-            return
-        }
-        
-        dataTask.resume()
     }
 
 }

@@ -3,9 +3,36 @@ import UIKit
 
 class BreedPresenter: NSObject, BreedPresentationLogic {
     weak var view: BreedDisplayLogic?
+    private var breedList = [Breed.BreedModel]()
     
     func presentBreed(response: Breed.Response) {
-        
+        breedList = response.breedList
+        var breedViewModelList = [Breed.BreedViewModel]()
+        _ = response.breedList.map {
+            breedViewModelList.append(
+                Breed.BreedViewModel(
+                    name: $0.name,
+                    imageUrl: $0.imageUrl
+                )
+            )
+        }
+        view?.displayBreedList(
+            viewModel: Breed.ViewModel(
+                breedViewModelList: breedViewModelList
+            )
+        )
+    }
+    
+    func presentError(message: String) {
+        view?.presentAlert(title: "Ops", message: message)
+    }
+    
+    func showLoadingView() {
+        view?.showLoadingView()
+    }
+    
+    func hideLoadingView() {
+        view?.hideLoadingView()
     }
 }
 
@@ -15,7 +42,7 @@ extension BreedPresenter: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return breedList.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

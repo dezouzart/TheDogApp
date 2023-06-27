@@ -29,7 +29,7 @@ class BreedViewController: UIViewController, BreedDisplayLogic {
     }
     
     func displayBreedList(viewModel: Breed.ViewModel) {
-        
+        print(viewModel)
     }
 }
 

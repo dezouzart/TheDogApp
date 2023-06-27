@@ -15,6 +15,9 @@ protocol BreedDisplayLogic: UICollectionViewDelegate {
 protocol BreedPresentationLogic: UICollectionViewDataSource {
     func registerCells(for collectionView: UICollectionView)
     func presentBreed(response: Breed.Response)
+    func presentError(message: String)
+    func showLoadingView()
+    func hideLoadingView()
 }
 
 protocol BreedBusinessLogic {

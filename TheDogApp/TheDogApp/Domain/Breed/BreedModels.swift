@@ -5,9 +5,26 @@ enum Breed {
         let page: Int
     }
     
-    struct Response {}
+    struct Response {
+        let breedList: [BreedModel]
+    }
     
-    struct ViewModel {}
+    struct ViewModel {
+        let breedViewModelList: [BreedViewModel]
+    }
+    
+    struct BreedViewModel {
+        let name: String
+        let imageUrl: URL
+    }
+    
+    struct BreedModel {
+        let name: String
+        let imageUrl: URL
+        let breedGroup: String
+        let temperament: String
+        let origin: String
+    }
     
     struct DataList {
         let breedDataList: [Breed.Data]
