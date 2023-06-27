@@ -14,17 +14,26 @@ class BreedViewCell: UICollectionViewCell {
             return imageView
     }()
     
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .seashell
+        label.textAlignment = .center
+        label.font = UIFont.helveticaNeue(size: 12)
+        return label
+    }()
+    
     private let loadingSpinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .medium)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.hidesWhenStopped = true
-        spinner.color = .white
+        spinner.color = .seashell
         return spinner
     }()
     
     override var isSelected: Bool {
         didSet {
-            imageView.layer.borderColor = UIColor.white.cgColor
+            imageView.layer.borderColor = UIColor.seashell.cgColor
             imageView.layer.borderWidth = isSelected ? 4 : 0
         }
     }
@@ -35,7 +44,7 @@ class BreedViewCell: UICollectionViewCell {
     }
     
     func config(with viewModel: Breed.BreedViewModel) {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = .black
         self.layer.cornerRadius = 20.0
         
         setupSubviews()
@@ -43,6 +52,7 @@ class BreedViewCell: UICollectionViewCell {
         
         showLoadingView()
         imageView.load(from: viewModel.imageUrl) { [weak self] in
+            self?.nameLabel.text = viewModel.name
             self?.hideLoadingView()
         }
         
@@ -59,17 +69,23 @@ class BreedViewCell: UICollectionViewCell {
     private func setupSubviews() {
         contentView.addSubview(imageView)
         contentView.addSubview(loadingSpinner)
+        contentView.addSubview(nameLabel)
     }
         
     private func setupConstraints() {
         let constraints = [
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
                 
             loadingSpinner.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            loadingSpinner.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            loadingSpinner.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ]
             
         NSLayoutConstraint.activate(constraints)

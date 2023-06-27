@@ -7,7 +7,7 @@ class TabBarController: UITabBarController {
         
         tabBar.backgroundColor = Themes.TabBar.backgroundColor
         tabBar.barTintColor = Themes.TabBar.backgroundColor
-        tabBar.standardAppearance.selectionIndicatorTintColor = Themes.TabBar.selectionIndicatorTintColor
+        tabBar.tintColor = Themes.TabBar.tintColor
         tabBar.unselectedItemTintColor = Themes.TabBar.unselectedItemTintColor
         
         if let font = Themes.TabBar.font {

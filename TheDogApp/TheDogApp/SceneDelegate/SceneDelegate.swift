@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         breedNavigation.tabBarItem = UITabBarItem(title: Labels.TabBar.list, image: nil, selectedImage: nil)
         
         let viewController2 = ViewController()
-        viewController2.view.backgroundColor = .white
+        viewController2.view.backgroundColor = .seashell
         let navigation2 = AppNavigationController(rootViewController: viewController2)
         navigation2.tabBarItem = UITabBarItem(title: Labels.TabBar.search, image: nil, selectedImage: nil)
         

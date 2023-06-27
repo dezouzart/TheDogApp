@@ -10,7 +10,7 @@ class BreedViewController: UIViewController {
         let spinner = UIActivityIndicatorView(style: .medium)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.hidesWhenStopped = true
-        spinner.color = .white
+        spinner.color = .seashell
         return spinner
     }()
     
@@ -53,7 +53,7 @@ class BreedViewController: UIViewController {
         let widthPerItem = availableWidth / itemsPerRow
         
         layout.sectionInset = UIEdgeInsets(top: 20.0, left: inset, bottom: 160.0, right: inset)
-        layout.itemSize = CGSize(width: widthPerItem, height: widthPerItem)
+        layout.itemSize = CGSize(width: widthPerItem, height: widthPerItem + 40)
         
         return layout
     }

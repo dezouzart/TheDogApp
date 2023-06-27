@@ -13,6 +13,7 @@ class AppNavigationController: UINavigationController {
     private func configNavigationBar() {
         navigationBar.backgroundColor = Themes.AppNavigation.backgroundColor
         navigationBar.barTintColor = Themes.AppNavigation.backgroundColor
+        navigationBar.tintColor = Themes.AppNavigation.tintColor
         navigationBar.isTranslucent = Themes.AppNavigation.isTranslucent
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
