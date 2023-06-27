@@ -25,6 +25,10 @@ extension BreedEndpoints {
         
         return request
     }
+    
+    static func setCredentialHeader(request: inout URLRequest) {
+        request.setValue(Credentials.apiKey, forHTTPHeaderField: "x-api-key")
+    }
 }
 
 extension BreedEndpoints {

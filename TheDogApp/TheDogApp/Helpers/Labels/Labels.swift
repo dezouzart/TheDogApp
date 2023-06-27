@@ -1,3 +1,7 @@
 import Foundation
 
-enum Labels {}
+enum Labels {
+    enum Alert {
+        static let dismiss = "Dismiss"
+    }
+}

@@ -52,7 +52,7 @@ class BreedInteractor: BreedBusinessLogic {
         }
         
         DispatchQueue.main.async {
-            self.presenter?.showLoadingView()
+            self.presenter?.hideLoadingView()
             self.presenter?.presentBreed(response: .init(breedList: breedList))
         }
     }

@@ -3,10 +3,8 @@ import UIKit
 
 class BreedPresenter: NSObject, BreedPresentationLogic {
     weak var view: BreedDisplayLogic?
-    private var breedList = [Breed.BreedModel]()
     
     func presentBreed(response: Breed.Response) {
-        breedList = response.breedList
         var breedViewModelList = [Breed.BreedViewModel]()
         _ = response.breedList.map {
             breedViewModelList.append(
@@ -33,23 +31,5 @@ class BreedPresenter: NSObject, BreedPresentationLogic {
     
     func hideLoadingView() {
         view?.hideLoadingView()
-    }
-}
-
-extension BreedPresenter: UICollectionViewDataSource {
-    func registerCells(for collectionView: UICollectionView) {
- 
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return breedList.count
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        UICollectionViewCell()
     }
 }

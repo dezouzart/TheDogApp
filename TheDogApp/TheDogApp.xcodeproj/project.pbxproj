@@ -36,6 +36,8 @@
 		F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */; };
 		F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */; };
 		F942ADED2A4AE39200A0D0CF /* Breed+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */; };
+		F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */; };
+		F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Theme.swift"; sourceTree = "<group>"; };
 		F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppNavigationController+Theme.swift"; sourceTree = "<group>"; };
 		F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Labels.swift"; sourceTree = "<group>"; };
+		F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewCell.swift; sourceTree = "<group>"; };
+		F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 			children = (
 				F942ADE02A4ADC7E00A0D0CF /* Labels */,
 				F942ADDF2A4ADC7000A0D0CF /* Styles */,
+				F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */,
+				F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			dependencies = (
 			);
 			name = TheDogApp;
+			packageProductDependencies = (
+			);
 			productName = TheDogApp;
 			productReference = F942AD742A48D2AA00A0D0CF /* TheDogApp.app */;
 			productType = "com.apple.product-type.application";
@@ -395,6 +403,8 @@
 				Base,
 			);
 			mainGroup = F942AD6B2A48D2AA00A0D0CF;
+			packageReferences = (
+			);
 			productRefGroup = F942AD752A48D2AA00A0D0CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -459,7 +469,9 @@
 				F942ADB22A48E0B500A0D0CF /* Fonts.swift in Sources */,
 				F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */,
 				F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */,
+				F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */,
 				F942ADE52A4ADDC900A0D0CF /* TabBarController+Labels.swift in Sources */,
+				F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */,
 				F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

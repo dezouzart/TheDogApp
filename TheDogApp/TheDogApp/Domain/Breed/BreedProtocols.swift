@@ -12,8 +12,7 @@ protocol BreedDisplayLogic: UICollectionViewDelegate {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
 }
 
-protocol BreedPresentationLogic: UICollectionViewDataSource {
-    func registerCells(for collectionView: UICollectionView)
+protocol BreedPresentationLogic {
     func presentBreed(response: Breed.Response)
     func presentError(message: String)
     func showLoadingView()
