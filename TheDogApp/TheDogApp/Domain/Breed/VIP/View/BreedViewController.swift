@@ -52,7 +52,7 @@ class BreedViewController: UIViewController {
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         
-        layout.sectionInset = UIEdgeInsets(top: 20.0, left: inset, bottom: 80.0, right: inset)
+        layout.sectionInset = UIEdgeInsets(top: 20.0, left: inset, bottom: 160.0, right: inset)
         layout.itemSize = CGSize(width: widthPerItem, height: widthPerItem)
         
         return layout

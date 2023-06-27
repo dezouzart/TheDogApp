@@ -18,6 +18,7 @@ class BreedViewCell: UICollectionViewCell {
         let spinner = UIActivityIndicatorView(style: .medium)
         spinner.translatesAutoresizingMaskIntoConstraints = false
         spinner.hidesWhenStopped = true
+        spinner.color = .white
         return spinner
     }()
     

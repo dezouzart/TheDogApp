@@ -33,19 +33,16 @@ class BreedInteractor: BreedBusinessLogic {
         _ = breedDataList.breedDataList.map {
             guard let name = $0.name,
                   let imageUrlString = $0.image?.url,
-                  let imageUrl = URL(string: imageUrlString),
-                  let breedGroup = $0.breedGroup,
-                  let temperament = $0.temperament,
-                  let origin = $0.origin else {
+                  let imageUrl = URL(string: imageUrlString) else {
                 return
             }
             
             let breed = Breed.BreedModel(
                 name: name,
                 imageUrl: imageUrl,
-                breedGroup: breedGroup,
-                temperament: temperament,
-                origin: origin
+                breedGroup:  $0.breedGroup,
+                temperament: $0.temperament,
+                origin: $0.origin
             )
             
             breedList.append(breed)

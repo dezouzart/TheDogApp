@@ -5,9 +5,10 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tabBar.backgroundColor = Themes.TabBar.backgroundColor
-        self.tabBar.standardAppearance.selectionIndicatorTintColor = Themes.TabBar.selectionIndicatorTintColor
-        self.tabBar.unselectedItemTintColor = Themes.TabBar.unselectedItemTintColor
+        tabBar.backgroundColor = Themes.TabBar.backgroundColor
+        tabBar.barTintColor = Themes.TabBar.backgroundColor
+        tabBar.standardAppearance.selectionIndicatorTintColor = Themes.TabBar.selectionIndicatorTintColor
+        tabBar.unselectedItemTintColor = Themes.TabBar.unselectedItemTintColor
         
         if let font = Themes.TabBar.font {
             UITabBarItem.appearance().setTitleTextAttributes(
