@@ -21,12 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let breedNavigation = AppNavigationController(rootViewController: breedListView)
         breedNavigation.tabBarItem = UITabBarItem(title: Labels.TabBar.list, image: nil, selectedImage: nil)
         
-        let viewController2 = ViewController()
-        viewController2.view.backgroundColor = .seashell
-        let navigation2 = AppNavigationController(rootViewController: viewController2)
-        navigation2.tabBarItem = UITabBarItem(title: Labels.TabBar.search, image: nil, selectedImage: nil)
+        let searchViewController = SearchViewController()
+        let searchNavigation = AppNavigationController(rootViewController: searchViewController)
+        searchNavigation.tabBarItem = UITabBarItem(title: Labels.TabBar.search, image: nil, selectedImage: nil)
         
-        tabBar.setViewControllers([breedNavigation, navigation2], animated: false)
+        tabBar.setViewControllers([breedNavigation, searchNavigation], animated: false)
         
         return tabBar
     }

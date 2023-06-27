@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F942AD782A48D2AA00A0D0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AD772A48D2AA00A0D0CF /* AppDelegate.swift */; };
 		F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AD792A48D2AA00A0D0CF /* SceneDelegate.swift */; };
-		F942AD7C2A48D2AA00A0D0CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AD7B2A48D2AA00A0D0CF /* ViewController.swift */; };
+		F942AD7C2A48D2AA00A0D0CF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AD7B2A48D2AA00A0D0CF /* SearchViewController.swift */; };
 		F942AD812A48D2AB00A0D0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F942AD802A48D2AB00A0D0CF /* Assets.xcassets */; };
 		F942AD842A48D2AB00A0D0CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F942AD822A48D2AB00A0D0CF /* LaunchScreen.storyboard */; };
 		F942AD8F2A48D2AB00A0D0CF /* TheDogAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AD8E2A48D2AB00A0D0CF /* TheDogAppTests.swift */; };
@@ -31,13 +31,13 @@
 		F942ADDC2A49F0B000A0D0CF /* BreedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */; };
 		F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */; };
 		F942ADE32A4ADCBA00A0D0CF /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE22A4ADCBA00A0D0CF /* Labels.swift */; };
-		F942ADE52A4ADDC900A0D0CF /* TabBarController+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */; };
 		F942ADE72A4ADE7500A0D0CF /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE62A4ADE7500A0D0CF /* Themes.swift */; };
 		F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */; };
 		F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */; };
 		F942ADED2A4AE39200A0D0CF /* Breed+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */; };
 		F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */; };
 		F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */; };
+		F942ADF82A4B55DB00A0D0CF /* TabBarController+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		F942AD742A48D2AA00A0D0CF /* TheDogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F942AD772A48D2AA00A0D0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F942AD792A48D2AA00A0D0CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F942AD7B2A48D2AA00A0D0CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F942AD7B2A48D2AA00A0D0CF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F942AD802A48D2AB00A0D0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F942AD832A48D2AB00A0D0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F942AD852A48D2AB00A0D0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,13 +86,13 @@
 		F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedEndpoint.swift; sourceTree = "<group>"; };
 		F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedProvider.swift; sourceTree = "<group>"; };
 		F942ADE22A4ADCBA00A0D0CF /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
-		F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Labels.swift"; sourceTree = "<group>"; };
 		F942ADE62A4ADE7500A0D0CF /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Theme.swift"; sourceTree = "<group>"; };
 		F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppNavigationController+Theme.swift"; sourceTree = "<group>"; };
 		F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Labels.swift"; sourceTree = "<group>"; };
 		F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewCell.swift; sourceTree = "<group>"; };
 		F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViews.swift; sourceTree = "<group>"; };
+		F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabBarController+Labels.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,6 @@
 				F942ADB32A48E2BA00A0D0CF /* AppNavigationController */,
 				F942ADAB2A48DC1200A0D0CF /* TabBarController */,
 				F942ADAE2A48E01C00A0D0CF /* Helpers */,
-				F942AD7B2A48D2AA00A0D0CF /* ViewController.swift */,
 				F942ADD32A49E9F700A0D0CF /* Network */,
 				F942ADBB2A49C7E700A0D0CF /* Domain */,
 				F942AD852A48D2AB00A0D0CF /* Info.plist */,
@@ -203,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				F942ADAC2A48DC2B00A0D0CF /* TabBarController.swift */,
-				F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */,
+				F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */,
 				F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */,
 			);
 			path = TabBarController;
@@ -244,6 +243,7 @@
 		F942ADBB2A49C7E700A0D0CF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				F942ADF62A4B506E00A0D0CF /* Search */,
 				F942ADB62A49C4FA00A0D0CF /* Breed */,
 			);
 			path = Domain;
@@ -311,6 +311,14 @@
 				F942ADE62A4ADE7500A0D0CF /* Themes.swift */,
 			);
 			path = Themes;
+			sourceTree = "<group>";
+		};
+		F942ADF62A4B506E00A0D0CF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F942AD7B2A48D2AA00A0D0CF /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +457,7 @@
 			files = (
 				F942ADB52A48E2D100A0D0CF /* AppNavigationController.swift in Sources */,
 				F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */,
-				F942AD7C2A48D2AA00A0D0CF /* ViewController.swift in Sources */,
+				F942AD7C2A48D2AA00A0D0CF /* SearchViewController.swift in Sources */,
 				F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */,
 				F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */,
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
@@ -470,8 +478,8 @@
 				F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */,
 				F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */,
 				F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */,
-				F942ADE52A4ADDC900A0D0CF /* TabBarController+Labels.swift in Sources */,
 				F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */,
+				F942ADF82A4B55DB00A0D0CF /* TabBarController+Labels.swift in Sources */,
 				F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,8 +654,7 @@
 				INFOPLIST_FILE = TheDogApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -673,8 +680,7 @@
 				INFOPLIST_FILE = TheDogApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
