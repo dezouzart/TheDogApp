@@ -2,39 +2,17 @@ import UIKit
 
 class BreedViewCell: UICollectionViewCell {
     static let reuseIdentifier = "BreedCell"
-    private let errorImage = UIImage(named: "error-image")
+    private let placeholderImage = UIImage(named: "placeholder-image")
+    private let style = BreedCellStyle()
     
-    private let imageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.contentMode = .scaleAspectFill
-            imageView.clipsToBounds = true
-            imageView.layer.cornerRadius = 20.0
-            imageView.image = UIImage(named: "placeholder-image")
-            return imageView
-    }()
-    
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .seashell
-        label.textAlignment = .center
-        label.font = UIFont.helveticaNeue(size: 12)
-        return label
-    }()
-    
-    private let loadingSpinner: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .medium)
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.hidesWhenStopped = true
-        spinner.color = .seashell
-        return spinner
-    }()
+    private var imageView = UIImageView()
+    private var nameLabel = UILabel()
+    private var loadingSpinner = UIActivityIndicatorView()
     
     override var isSelected: Bool {
         didSet {
-            imageView.layer.borderColor = UIColor.seashell.cgColor
-            imageView.layer.borderWidth = isSelected ? 4 : 0
+            imageView.layer.borderColor = style.imageBorderColor.cgColor
+            imageView.layer.borderWidth = isSelected ? style.imageSelectedBorderWidth : style.imageBorderWidth
         }
     }
 
@@ -44,10 +22,11 @@ class BreedViewCell: UICollectionViewCell {
     }
     
     func config(with viewModel: Breed.BreedViewModel) {
-        self.backgroundColor = .black
-        self.layer.cornerRadius = 20.0
+        self.backgroundColor = style.backgroundColor
+        self.layer.cornerRadius = style.cornerRadius
         
-        setupSubviews()
+        setupComponents()
+        addSubviews()
         setupConstraints()
         
         showLoadingView()
@@ -66,7 +45,7 @@ class BreedViewCell: UICollectionViewCell {
         loadingSpinner.stopAnimating()
     }
     
-    private func setupSubviews() {
+    private func addSubviews() {
         contentView.addSubview(imageView)
         contentView.addSubview(loadingSpinner)
         contentView.addSubview(nameLabel)
@@ -89,5 +68,23 @@ class BreedViewCell: UICollectionViewCell {
         ]
             
         NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func setupComponents() {
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = style.imageCornerRadius
+        imageView.image = placeholderImage
+        
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.textColor = style.labelTextColor
+        nameLabel.textAlignment = style.labelTextAlignment
+        nameLabel.font = style.labelFont
+        
+        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
+        loadingSpinner.hidesWhenStopped = true
+        loadingSpinner.style = style.spinnerStyle
+        loadingSpinner.color = style.spinnerColor
     }
 }

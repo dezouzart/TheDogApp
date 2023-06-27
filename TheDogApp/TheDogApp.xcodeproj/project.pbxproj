@@ -38,6 +38,8 @@
 		F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */; };
 		F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */; };
 		F942ADF82A4B55DB00A0D0CF /* TabBarController+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */; };
+		F942ADFB2A4B633A00A0D0CF /* BreedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADFA2A4B633A00A0D0CF /* BreedStyle.swift */; };
+		F942ADFD2A4B638000A0D0CF /* Breed+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedViewCell.swift; sourceTree = "<group>"; };
 		F942ADF02A4B124D00A0D0CF /* UIImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViews.swift; sourceTree = "<group>"; };
 		F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabBarController+Labels.swift"; sourceTree = "<group>"; };
+		F942ADFA2A4B633A00A0D0CF /* BreedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedStyle.swift; sourceTree = "<group>"; };
+		F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,7 @@
 		F942ADCC2A49DCC700A0D0CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F942ADF92A4B613900A0D0CF /* Style */,
 				F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */,
 				F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */,
 			);
@@ -319,6 +324,15 @@
 				F942AD7B2A48D2AA00A0D0CF /* SearchViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		F942ADF92A4B613900A0D0CF /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADFA2A4B633A00A0D0CF /* BreedStyle.swift */,
+				F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,8 +470,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F942ADB52A48E2D100A0D0CF /* AppNavigationController.swift in Sources */,
+				F942ADFB2A4B633A00A0D0CF /* BreedStyle.swift in Sources */,
 				F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */,
 				F942AD7C2A48D2AA00A0D0CF /* SearchViewController.swift in Sources */,
+				F942ADFD2A4B638000A0D0CF /* Breed+Theme.swift in Sources */,
 				F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */,
 				F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */,
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,

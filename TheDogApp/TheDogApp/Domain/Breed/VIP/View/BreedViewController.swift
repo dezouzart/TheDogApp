@@ -4,20 +4,14 @@ import UIKit
 class BreedViewController: UIViewController {
     var interactor: BreedBusinessLogic?
     private var collectionView: UICollectionView!
+    private var loadingSpinner: UIActivityIndicatorView!
     private var breedViewModelList = [Breed.BreedViewModel]()
-    
-    private let loadingSpinner: UIActivityIndicatorView = {
-        let spinner = UIActivityIndicatorView(style: .medium)
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.hidesWhenStopped = true
-        spinner.color = .seashell
-        return spinner
-    }()
+    private var style = BreedListingStyle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Labels.Breed.Scenes.Listing.title
-        view.backgroundColor = .black
+        view.backgroundColor = style.backgroundColor
         
         setupCollectionView()
         setupLoadingSpinner()
@@ -26,7 +20,13 @@ class BreedViewController: UIViewController {
     }
     
     private func setupLoadingSpinner() {
+        loadingSpinner = UIActivityIndicatorView(style: style.spinnerStyle)
+        loadingSpinner.color = style.spinnerColor
+        loadingSpinner.hidesWhenStopped = true
+        loadingSpinner.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(loadingSpinner)
+        
         let constraints = [
             loadingSpinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingSpinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
@@ -36,26 +36,16 @@ class BreedViewController: UIViewController {
     }
     
     private func setupCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: getLayout())
-        collectionView.backgroundColor = .clear
+        collectionView = UICollectionView(
+            frame: view.bounds,
+            collectionViewLayout: style.getLayout(view.frame.width)
+        )
+        collectionView.backgroundColor = style.collectionViewColor
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(BreedViewCell.self, forCellWithReuseIdentifier: BreedViewCell.reuseIdentifier)
+        
         view.addSubview(collectionView)
-    }
-    
-    private func getLayout() -> UICollectionViewFlowLayout {
-        let layout = UICollectionViewFlowLayout()
-        let inset: CGFloat = 20.0
-        let itemsPerRow: CGFloat = 2
-        let paddingSpace = inset * (itemsPerRow + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / itemsPerRow
-        
-        layout.sectionInset = UIEdgeInsets(top: 20.0, left: inset, bottom: 160.0, right: inset)
-        layout.itemSize = CGSize(width: widthPerItem, height: widthPerItem + 40)
-        
-        return layout
     }
 }
 

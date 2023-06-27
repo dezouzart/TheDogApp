@@ -76,6 +76,7 @@ class SearchViewController: UIViewController {
     }
     
     @objc private func updateLabel() {
+        textField.text = ""
         label.text = "Sorry, search feature is not working yet. The api.dog service is not prepared for breed name search. See more at https://documenter.getpostman.com/view/5578104/2s935hRnak#89124209-a975-4dac-985c-ecd9b25ec2de and https://developers.thecatapi.com/view-account/ylX4blBYT9FaoVd6OhvR?report=gpN-ReBkp"
     }
 }
