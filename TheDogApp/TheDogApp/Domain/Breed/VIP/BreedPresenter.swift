@@ -10,7 +10,10 @@ class BreedPresenter: NSObject, BreedPresentationLogic {
             breedViewModelList.append(
                 Breed.BreedViewModel(
                     name: $0.name,
-                    imageUrl: $0.imageUrl
+                    imageUrl: $0.imageUrl,
+                    breedGroup: $0.breedGroup,
+                    temperament: $0.temperament,
+                    origin: $0.origin
                 )
             )
         }

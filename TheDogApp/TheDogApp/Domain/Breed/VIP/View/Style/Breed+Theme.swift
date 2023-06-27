@@ -41,5 +41,5 @@ extension Themes.Breed.Listing.Cell {
 }
 
 extension Themes.Breed.Detail {
-    
+    static let backgroundColor = UIColor.black
 }

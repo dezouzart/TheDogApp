@@ -28,6 +28,9 @@ enum Breed {
     struct BreedViewModel {
         let name: String
         let imageUrl: URL
+        let breedGroup: String?
+        let temperament: String?
+        let origin: String?
     }
 }
 

@@ -7,6 +7,10 @@ extension Labels {
                 static let title = "Breed List"
             }
             
+            enum Detail {
+                static let title = "Breed Detail"
+            }
+            
             enum Search {
                 static let title = "Search"
             }

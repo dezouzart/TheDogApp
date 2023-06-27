@@ -40,6 +40,10 @@
 		F942ADF82A4B55DB00A0D0CF /* TabBarController+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */; };
 		F942ADFB2A4B633A00A0D0CF /* BreedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADFA2A4B633A00A0D0CF /* BreedStyle.swift */; };
 		F942ADFD2A4B638000A0D0CF /* Breed+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */; };
+		F942ADFF2A4B8DE200A0D0CF /* BreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADFE2A4B8DE200A0D0CF /* BreedDetailViewController.swift */; };
+		F942AE012A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */; };
+		F942AE062A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */; };
+		F942AE082A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		F942ADF72A4B55DB00A0D0CF /* TabBarController+Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabBarController+Labels.swift"; sourceTree = "<group>"; };
 		F942ADFA2A4B633A00A0D0CF /* BreedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedStyle.swift; sourceTree = "<group>"; };
 		F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Theme.swift"; sourceTree = "<group>"; };
+		F942ADFE2A4B8DE200A0D0CF /* BreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailViewController.swift; sourceTree = "<group>"; };
+		F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+BreedDisplayLogic.swift"; sourceTree = "<group>"; };
+		F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,9 +274,9 @@
 		F942ADCC2A49DCC700A0D0CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F942AE042A4B928E00A0D0CF /* BreedVIewDetail */,
+				F942AE022A4B925A00A0D0CF /* BreedViewList */,
 				F942ADF92A4B613900A0D0CF /* Style */,
-				F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */,
-				F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +341,34 @@
 				F942ADFC2A4B638000A0D0CF /* Breed+Theme.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		F942AE022A4B925A00A0D0CF /* BreedViewList */ = {
+			isa = PBXGroup;
+			children = (
+				F942AE032A4B927E00A0D0CF /* BreedCell */,
+				F942ADD12A49DD7100A0D0CF /* BreedViewController.swift */,
+				F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */,
+				F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */,
+				F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */,
+			);
+			path = BreedViewList;
+			sourceTree = "<group>";
+		};
+		F942AE032A4B927E00A0D0CF /* BreedCell */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADEE2A4B091800A0D0CF /* BreedViewCell.swift */,
+			);
+			path = BreedCell;
+			sourceTree = "<group>";
+		};
+		F942AE042A4B928E00A0D0CF /* BreedVIewDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADFE2A4B8DE200A0D0CF /* BreedDetailViewController.swift */,
+			);
+			path = BreedVIewDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +515,8 @@
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
 				F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */,
 				F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */,
+				F942ADFF2A4B8DE200A0D0CF /* BreedDetailViewController.swift in Sources */,
+				F942AE082A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift in Sources */,
 				F942ADE72A4ADE7500A0D0CF /* Themes.swift in Sources */,
 				F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */,
 				F942ADD52A49EA2100A0D0CF /* RemoteRepositoryError.swift in Sources */,
@@ -486,6 +524,7 @@
 				F942ADCE2A49DD0800A0D0CF /* BreedInteractor.swift in Sources */,
 				F942ADED2A4AE39200A0D0CF /* Breed+Labels.swift in Sources */,
 				F942ADBA2A49C57E00A0D0CF /* BreedProtocols.swift in Sources */,
+				F942AE062A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift in Sources */,
 				F942ADD22A49DD7100A0D0CF /* BreedViewController.swift in Sources */,
 				F942AD782A48D2AA00A0D0CF /* AppDelegate.swift in Sources */,
 				F942ADE32A4ADCBA00A0D0CF /* Labels.swift in Sources */,
@@ -496,6 +535,7 @@
 				F942ADEF2A4B091800A0D0CF /* BreedViewCell.swift in Sources */,
 				F942ADF12A4B124D00A0D0CF /* UIImageViews.swift in Sources */,
 				F942ADF82A4B55DB00A0D0CF /* TabBarController+Labels.swift in Sources */,
+				F942AE012A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift in Sources */,
 				F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

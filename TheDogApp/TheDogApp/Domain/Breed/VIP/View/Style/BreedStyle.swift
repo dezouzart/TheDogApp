@@ -38,5 +38,5 @@ struct BreedCellStyle {
 }
 
 struct BreedDetailStyle {
-    
+    let backgroundColor = Themes.Breed.Detail.backgroundColor
 }

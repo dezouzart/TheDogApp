@@ -9,7 +9,6 @@ protocol BreedDisplayLogic: UICollectionViewDelegate {
     func showLoadingView()
     func hideLoadingView()
     func presentAlert(title: String, message: String)
-    func pushViewController(_ viewController: UIViewController, animated: Bool)
 }
 
 protocol BreedPresentationLogic {
