@@ -2,7 +2,7 @@ import UIKit
 
 class AppNavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return Themes.AppNavigation.preferredStatusBarStyle
     }
     
     override func viewDidLoad() {
@@ -11,13 +11,16 @@ class AppNavigationController: UINavigationController {
     }
     
     private func configNavigationBar() {
-        navigationBar.backgroundColor = .black
-        navigationBar.isTranslucent = false
+        navigationBar.backgroundColor = Themes.AppNavigation.backgroundColor
+        navigationBar.isTranslucent = Themes.AppNavigation.isTranslucent
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         
-        if let font = UIFont.helveticaNeueBold {
-            navigationBar.titleTextAttributes = [.foregroundColor: UIColor.seashell, .font: font]
+        if let font = Themes.AppNavigation.titleText.font {
+            navigationBar.titleTextAttributes = [
+                .foregroundColor: Themes.AppNavigation.titleText.color,
+                .font: font
+            ]
         }
     }
 }

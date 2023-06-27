@@ -23,7 +23,7 @@ class BreedInteractor: BreedBusinessLogic {
     private func completionError() {
         DispatchQueue.main.async {
             self.presenter?.hideLoadingView()
-            self.presenter?.presentError(message: "Could not load breeds from server")
+            self.presenter?.presentError(message: Labels.Breed.Erros.fetchMessage)
         }
     }
     

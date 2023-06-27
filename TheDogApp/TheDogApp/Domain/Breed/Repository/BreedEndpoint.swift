@@ -11,7 +11,7 @@ extension BreedEndpoints {
     private var queryString: String {
         switch self {
         case .breedList(let page):
-            return "?order=ASC&limit=24&page=\(page)"
+            return "?order=\(QueryStringParam.orderAscendent)&limit=\(QueryStringParam.elementLimit)&page=\(page)"
         }
     }
 
@@ -24,6 +24,13 @@ extension BreedEndpoints {
         request.setValue(Credentials.apiKey, forHTTPHeaderField: "x-api-key")
         
         return request
+    }
+}
+
+extension BreedEndpoints {
+    enum QueryStringParam {
+        static let orderAscendent = "ASC"
+        static let elementLimit = "24"
     }
 }
 

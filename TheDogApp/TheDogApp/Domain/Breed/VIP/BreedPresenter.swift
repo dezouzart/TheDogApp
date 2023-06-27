@@ -24,7 +24,7 @@ class BreedPresenter: NSObject, BreedPresentationLogic {
     }
     
     func presentError(message: String) {
-        view?.presentAlert(title: "Ops", message: message)
+        view?.presentAlert(title: Labels.Breed.Erros.title, message: message)
     }
     
     func showLoadingView() {

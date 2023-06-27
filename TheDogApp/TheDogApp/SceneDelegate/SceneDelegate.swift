@@ -17,25 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func setupViewControllers() -> TabBarController {
         let tabBar = TabBarController()
         
-        if let font = UIFont.helveticaNeue(size: 18) {
-            UITabBarItem.appearance().setTitleTextAttributes(
-                [NSAttributedString.Key.font: font],
-                for: .normal
-            )
-            UITabBarItem.appearance().setTitleTextAttributes(
-                [NSAttributedString.Key.font: font],
-                for: .selected
-            )
-        }
-        
         let breedListView = BreedModuleFactory.create()
         let breedNavigation = AppNavigationController(rootViewController: breedListView)
-        breedNavigation.tabBarItem = UITabBarItem(title: "List", image: nil, selectedImage: nil)
+        breedNavigation.tabBarItem = UITabBarItem(title: Labels.TabBar.list, image: nil, selectedImage: nil)
         
         let viewController2 = ViewController()
         viewController2.view.backgroundColor = .white
         let navigation2 = AppNavigationController(rootViewController: viewController2)
-        navigation2.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
+        navigation2.tabBarItem = UITabBarItem(title: Labels.TabBar.search, image: nil, selectedImage: nil)
         
         tabBar.setViewControllers([breedNavigation, navigation2], animated: false)
         

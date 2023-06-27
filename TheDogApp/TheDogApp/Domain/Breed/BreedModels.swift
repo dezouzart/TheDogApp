@@ -1,21 +1,15 @@
 import Foundation
 
+// Models to supporting VIP Architecture
 enum Breed {
+    // Interactor
     struct Request {
         let page: Int
     }
     
+    // Presenter
     struct Response {
         let breedList: [BreedModel]
-    }
-    
-    struct ViewModel {
-        let breedViewModelList: [BreedViewModel]
-    }
-    
-    struct BreedViewModel {
-        let name: String
-        let imageUrl: URL
     }
     
     struct BreedModel {
@@ -26,6 +20,19 @@ enum Breed {
         let origin: String
     }
     
+    // View
+    struct ViewModel {
+        let breedViewModelList: [BreedViewModel]
+    }
+    
+    struct BreedViewModel {
+        let name: String
+        let imageUrl: URL
+    }
+}
+
+// Models to supporting API comunication
+extension Breed {
     struct DataList {
         let breedDataList: [Breed.Data]
     }

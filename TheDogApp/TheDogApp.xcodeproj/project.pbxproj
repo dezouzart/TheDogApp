@@ -30,6 +30,12 @@
 		F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADD82A49EA7900A0D0CF /* ResourceJSONParser.swift */; };
 		F942ADDC2A49F0B000A0D0CF /* BreedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */; };
 		F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */; };
+		F942ADE32A4ADCBA00A0D0CF /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE22A4ADCBA00A0D0CF /* Labels.swift */; };
+		F942ADE52A4ADDC900A0D0CF /* TabBarController+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */; };
+		F942ADE72A4ADE7500A0D0CF /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE62A4ADE7500A0D0CF /* Themes.swift */; };
+		F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */; };
+		F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */; };
+		F942ADED2A4AE39200A0D0CF /* Breed+Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,12 @@
 		F942ADD82A49EA7900A0D0CF /* ResourceJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceJSONParser.swift; sourceTree = "<group>"; };
 		F942ADDB2A49F0B000A0D0CF /* BreedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedEndpoint.swift; sourceTree = "<group>"; };
 		F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedProvider.swift; sourceTree = "<group>"; };
+		F942ADE22A4ADCBA00A0D0CF /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Labels.swift"; sourceTree = "<group>"; };
+		F942ADE62A4ADE7500A0D0CF /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBarController+Theme.swift"; sourceTree = "<group>"; };
+		F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppNavigationController+Theme.swift"; sourceTree = "<group>"; };
+		F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Breed+Labels.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				F942ADAC2A48DC2B00A0D0CF /* TabBarController.swift */,
+				F942ADE42A4ADDC900A0D0CF /* TabBarController+Labels.swift */,
+				F942ADE82A4ADEF000A0D0CF /* TabBarController+Theme.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -194,8 +208,8 @@
 		F942ADAE2A48E01C00A0D0CF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F942ADAF2A48E04C00A0D0CF /* Colors.swift */,
-				F942ADB12A48E0B500A0D0CF /* Fonts.swift */,
+				F942ADE02A4ADC7E00A0D0CF /* Labels */,
+				F942ADDF2A4ADC7000A0D0CF /* Styles */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				F942ADB42A48E2D100A0D0CF /* AppNavigationController.swift */,
+				F942ADEA2A4AE09400A0D0CF /* AppNavigationController+Theme.swift */,
 			);
 			path = AppNavigationController;
 			sourceTree = "<group>";
@@ -214,6 +229,7 @@
 				F942ADB72A49C55F00A0D0CF /* BreedModuleFactory.swift */,
 				F942ADB92A49C57E00A0D0CF /* BreedProtocols.swift */,
 				F942ADC92A49DCAF00A0D0CF /* BreedModels.swift */,
+				F942ADEC2A4AE39200A0D0CF /* Breed+Labels.swift */,
 				F942ADCB2A49DCB400A0D0CF /* VIP */,
 				F942ADDA2A49EB9300A0D0CF /* Repository */,
 			);
@@ -263,6 +279,32 @@
 				F942ADDD2A49FA9D00A0D0CF /* BreedProvider.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		F942ADDF2A4ADC7000A0D0CF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADE12A4ADC9D00A0D0CF /* Themes */,
+				F942ADAF2A48E04C00A0D0CF /* Colors.swift */,
+				F942ADB12A48E0B500A0D0CF /* Fonts.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		F942ADE02A4ADC7E00A0D0CF /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADE22A4ADCBA00A0D0CF /* Labels.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		F942ADE12A4ADC9D00A0D0CF /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				F942ADE62A4ADE7500A0D0CF /* Themes.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,22 +438,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				F942ADB52A48E2D100A0D0CF /* AppNavigationController.swift in Sources */,
+				F942ADEB2A4AE09400A0D0CF /* AppNavigationController+Theme.swift in Sources */,
 				F942AD7C2A48D2AA00A0D0CF /* ViewController.swift in Sources */,
 				F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */,
 				F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */,
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
 				F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */,
 				F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */,
+				F942ADE72A4ADE7500A0D0CF /* Themes.swift in Sources */,
 				F942ADDE2A49FA9D00A0D0CF /* BreedProvider.swift in Sources */,
 				F942ADD52A49EA2100A0D0CF /* RemoteRepositoryError.swift in Sources */,
 				F942ADAD2A48DC2B00A0D0CF /* TabBarController.swift in Sources */,
 				F942ADCE2A49DD0800A0D0CF /* BreedInteractor.swift in Sources */,
+				F942ADED2A4AE39200A0D0CF /* Breed+Labels.swift in Sources */,
 				F942ADBA2A49C57E00A0D0CF /* BreedProtocols.swift in Sources */,
 				F942ADD22A49DD7100A0D0CF /* BreedViewController.swift in Sources */,
 				F942AD782A48D2AA00A0D0CF /* AppDelegate.swift in Sources */,
+				F942ADE32A4ADCBA00A0D0CF /* Labels.swift in Sources */,
 				F942ADDC2A49F0B000A0D0CF /* BreedEndpoint.swift in Sources */,
 				F942ADB22A48E0B500A0D0CF /* Fonts.swift in Sources */,
 				F942AD7A2A48D2AA00A0D0CF /* SceneDelegate.swift in Sources */,
+				F942ADE92A4ADEF000A0D0CF /* TabBarController+Theme.swift in Sources */,
+				F942ADE52A4ADDC900A0D0CF /* TabBarController+Labels.swift in Sources */,
 				F942ADD72A49EA4200A0D0CF /* URLSessionBoundaries.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
