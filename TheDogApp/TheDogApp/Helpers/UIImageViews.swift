@@ -8,6 +8,10 @@ class ImageCache {
 }
 
 extension UIImageView {
+    var placeholderImage: UIImage? {
+        UIImage(named: "placeholder-image")
+    }
+    
     var errorImage: UIImage? {
         UIImage(named: "error-image")
     }

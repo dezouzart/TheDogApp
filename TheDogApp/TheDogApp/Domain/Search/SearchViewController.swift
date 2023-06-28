@@ -1,5 +1,9 @@
 import UIKit
 
+// Did not put much effort on this class
+// cuz there is no sense in making this pretty
+// without a functional service
+
 class SearchViewController: UIViewController {
     private var button: UIButton!
     

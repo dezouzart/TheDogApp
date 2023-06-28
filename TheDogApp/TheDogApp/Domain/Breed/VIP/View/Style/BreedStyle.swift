@@ -39,4 +39,17 @@ struct BreedCellStyle {
 
 struct BreedDetailStyle {
     let backgroundColor = Themes.Breed.Detail.backgroundColor
+    let topInset = Themes.Breed.Detail.topInset
+    let verticalSpacing = Themes.Breed.Detail.verticalSpacing
+    
+    let labelTextColor = Themes.Breed.Detail.Label.textColor
+    let labelTextAlignment = Themes.Breed.Detail.Label.textAlignment
+    let labelFont = Themes.Breed.Detail.Label.font
+    let labelNumberOfLines = Themes.Breed.Detail.Label.numberOfLines
+    let labelHeight = Themes.Breed.Detail.Label.height
+    let labelLeading = Themes.Breed.Detail.Label.leading
+    let labelTrailing = Themes.Breed.Detail.Label.trailing
+    
+    let imageCornerRadius = Themes.Breed.Detail.Image.cornerRadius
+    let imageSize = Themes.Breed.Detail.Image.size
 }

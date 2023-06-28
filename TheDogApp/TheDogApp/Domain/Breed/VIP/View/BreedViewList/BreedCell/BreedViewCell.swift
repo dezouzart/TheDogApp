@@ -2,7 +2,6 @@ import UIKit
 
 class BreedViewCell: UICollectionViewCell {
     static let reuseIdentifier = "BreedCell"
-    private let placeholderImage = UIImage(named: "placeholder-image")
     private let style = BreedCellStyle()
     
     private var imageView = UIImageView()
@@ -75,7 +74,7 @@ class BreedViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = style.imageCornerRadius
-        imageView.image = placeholderImage
+        imageView.image = imageView.placeholderImage
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = style.labelTextColor

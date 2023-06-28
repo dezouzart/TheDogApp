@@ -42,4 +42,21 @@ extension Themes.Breed.Listing.Cell {
 
 extension Themes.Breed.Detail {
     static let backgroundColor = UIColor.black
+    static let topInset = 40.0
+    static let verticalSpacing = 20.0
+    
+    enum Label {
+        static let textColor = UIColor.seashell
+        static let textAlignment = NSTextAlignment.center
+        static let font = UIFont.helveticaNeue(size: 12)
+        static let numberOfLines = 2
+        static let height = 32.0
+        static let leading = 16.0
+        static let trailing = -16.0
+    }
+    
+    enum Image {
+        static let cornerRadius = 20.0
+        static let size = 240.0
+    }
 }
