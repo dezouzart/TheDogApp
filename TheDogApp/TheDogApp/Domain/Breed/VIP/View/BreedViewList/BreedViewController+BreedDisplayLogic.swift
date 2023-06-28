@@ -21,7 +21,16 @@ extension BreedViewController: BreedDisplayLogic {
     }
     
     func displayBreedList(viewModel: Breed.ViewModel) {
-        breedViewModelList = viewModel.breedViewModelList
-        collectionView.reloadData()
+        let newItems = viewModel.breedViewModelList
+
+        collectionView.performBatchUpdates({
+            breedViewModelList.append(contentsOf: newItems)
+            let indexPaths = (breedViewModelList.count - newItems.count..<breedViewModelList.count).map {
+                IndexPath(item: $0, section: 0)
+            }
+            collectionView.insertItems(at: indexPaths)
+        }, completion: nil)
+        
+        isLoadingMoreItens = false
     }
 }

@@ -4,6 +4,7 @@ import UIKit
 class BreedViewController: UIViewController {
     var interactor: BreedBusinessLogic?
     var breedViewModelList = [Breed.BreedViewModel]()
+    var isLoadingMoreItens = false
     private(set) var style = BreedListingStyle()
     private(set) var collectionView: UICollectionView!
     private(set) var loadingSpinner: UIActivityIndicatorView!
@@ -16,7 +17,7 @@ class BreedViewController: UIViewController {
         setupCollectionView()
         setupLoadingSpinner()
         
-        interactor?.fetchBreeds(request: Breed.Request(page: 0))
+        interactor?.fetchBreeds(request: Breed.Request())
     }
     
     private func setupLoadingSpinner() {
@@ -27,9 +28,14 @@ class BreedViewController: UIViewController {
         
         view.addSubview(loadingSpinner)
         
+        let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0
+        let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
+        let safeAreaInsets = view.safeAreaInsets
+        let centerY = (view.bounds.height - tabBarHeight - navigationBarHeight - safeAreaInsets.bottom) / 2
+        
         let constraints = [
             loadingSpinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingSpinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            loadingSpinner.centerYAnchor.constraint(equalTo: view.topAnchor, constant: centerY)
         ]
             
         NSLayoutConstraint.activate(constraints)

@@ -12,7 +12,7 @@ class BreedProvider: BreedRepository {
         self.jsonParser = jsonParser
     }
     
-    func fetchBreeds(dataRequest: Breed.Request, completion: @escaping BreedCompletion) {
+    func fetchBreeds(dataRequest: Breed.DataRequest, completion: @escaping BreedCompletion) {
         DispatchQueue.global().async { [weak self] in
             guard let request = BreedEndpoints.breedList(page: dataRequest.page).request else {
                 completion(.failure(RemoteRepositoryError.requestInvalid))

@@ -44,6 +44,7 @@
 		F942AE012A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */; };
 		F942AE062A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */; };
 		F942AE082A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */; };
+		F942AE0A2A4BDBC800A0D0CF /* BreedViewController+UIScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F942AE092A4BDBC800A0D0CF /* BreedViewController+UIScrollViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+BreedDisplayLogic.swift"; sourceTree = "<group>"; };
 		F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		F942AE092A4BDBC800A0D0CF /* BreedViewController+UIScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedViewController+UIScrollViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 				F942AE002A4B91D000A0D0CF /* BreedViewController+BreedDisplayLogic.swift */,
 				F942AE072A4B935700A0D0CF /* BreedViewController+UICollectionViewDataSource.swift */,
 				F942AE052A4B92CB00A0D0CF /* BreedViewController+UICollectionViewDelegate.swift */,
+				F942AE092A4BDBC800A0D0CF /* BreedViewController+UIScrollViewDelegate.swift */,
 			);
 			path = BreedViewList;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				F942ADD92A49EA7900A0D0CF /* ResourceJSONParser.swift in Sources */,
 				F942ADCA2A49DCAF00A0D0CF /* BreedModels.swift in Sources */,
 				F942ADB02A48E04C00A0D0CF /* Colors.swift in Sources */,
+				F942AE0A2A4BDBC800A0D0CF /* BreedViewController+UIScrollViewDelegate.swift in Sources */,
 				F942ADB82A49C55F00A0D0CF /* BreedModuleFactory.swift in Sources */,
 				F942ADD02A49DD1500A0D0CF /* BreedPresenter.swift in Sources */,
 				F942ADFF2A4B8DE200A0D0CF /* BreedDetailViewController.swift in Sources */,

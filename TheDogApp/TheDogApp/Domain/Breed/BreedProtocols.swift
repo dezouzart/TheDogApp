@@ -23,5 +23,5 @@ protocol BreedBusinessLogic {
 }
 
 protocol BreedRepository {
-    func fetchBreeds(dataRequest: Breed.Request, completion: @escaping (Result<Breed.DataList, Swift.Error>) -> Void)
+    func fetchBreeds(dataRequest: Breed.DataRequest, completion: @escaping (Result<Breed.DataList, Swift.Error>) -> Void)
 }

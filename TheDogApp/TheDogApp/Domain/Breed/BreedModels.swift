@@ -3,9 +3,7 @@ import Foundation
 // Models to supporting VIP Architecture
 enum Breed {
     // Interactor
-    struct Request {
-        let page: Int
-    }
+    struct Request {}
     
     // Presenter
     struct Response {
@@ -21,21 +19,33 @@ enum Breed {
     }
     
     // View
-    struct ViewModel {
+    struct ViewModel: Equatable {
         let breedViewModelList: [BreedViewModel]
+        
+        static func == (lhs: Breed.ViewModel, rhs: Breed.ViewModel) -> Bool {
+            return lhs.breedViewModelList == rhs.breedViewModelList
+        }
     }
     
-    struct BreedViewModel {
+    struct BreedViewModel: Equatable {
         let name: String
         let imageUrl: URL
         let breedGroup: String?
         let temperament: String?
         let origin: String?
+        
+        static func == (lhs: BreedViewModel, rhs: BreedViewModel) -> Bool {
+            return lhs.name == rhs.name
+        }
     }
 }
 
 // Models to supporting API comunication
 extension Breed {
+    struct DataRequest {
+        let page: Int
+    }
+    
     struct DataList {
         let breedDataList: [Breed.Data]
     }
